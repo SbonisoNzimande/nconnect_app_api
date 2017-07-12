@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php/$1 [NC,L]
+RewriteCond %{HTTP_HOST} ^localhost\:81\/personmanagement$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.localhost\:81\/personmanagement$
+RewriteRule ^/?$ "http\:\/\/localhost\:81\/personmanagement\/index\.php\/Login" [R=301,L]
+

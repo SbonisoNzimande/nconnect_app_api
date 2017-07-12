@@ -1,0 +1,45 @@
+<div class="animate form login_form">
+	<section class="login_content">
+		<form name="LoginForm" ng-submit="SubmitLoginForm (LoginForm.$valid)">
+			<h1>Login Form</h1>
+			<div ng-show="login_error" class="alert alert-danger alert-dismissible fade in" role="alert" style="text-shadow: none!important;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<strong>{{login_error}}</strong>
+			</div>
+			<div ng-show="login_success" class="alert alert-success alert-dismissible fade in" role="alert" style="text-shadow: none!important;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<strong>Credentials correct,</strong> logging you in...
+			</div>
+			<div>
+				<input type="text" class="form-control" name="Username" placeholder="Username" ng-model="username" required ng-required='true' />
+				<p ng-show="LoginForm.username.$invalid && !LoginForm.username.$pristine" class="help-block">Your username is required.</p>
+			</div>
+			<div>
+				<input type="password" class="form-control" name="Password" placeholder="Password" ng-model="password" required ng-required='true' />
+				<p ng-show="LoginForm.password.$invalid && !LoginForm.password.$pristine" class="help-block">Your password is required.</p>
+			</div>
+			<div>
+				<button class="btn btn-default submit" type="submit" ng-disabled="LoginForm.$invalid" >Log in</button>
+				<!-- <a class="reset_pass" href="#">Lost your password?</a> -->
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="separator">
+				<p class="change_link">New to system?
+					<a href="#signup" class="to_register"> Create Account </a>
+				</p>
+
+				<div class="clearfix"></div>
+				<br />
+
+				<div>
+					<h1><i class="fa fa-paw"></i> Propay Person Management</h1>
+					
+				</div>
+			</div>
+		</form>
+	</section>
+</div>

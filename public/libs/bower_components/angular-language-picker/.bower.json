@@ -1,0 +1,44 @@
+{
+  "name": "angular-language-picker",
+  "homepage": "https://github.com/azachar/angular-language-picker",
+  "main": [
+    "dist/angular-language-picker.js",
+    "dist/angular-language-picker.templates.js",
+    "dist/angular-language-picker.min.css"
+  ],
+  "authors": [
+    "Kate Hudson <k88hudson@gmail.com>",
+    "Andrej Zachar <andrej@chocolatejar.eu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azachar/angular-language-picker.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "font-awesome": "~4.5.0",
+    "flag-icon-css": "~1.1.0"
+  },
+  "devDependencies": {
+    "langmap": "azachar/language-mapping-list#^0.0.13"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.4.3",
+  "_release": "0.4.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.3",
+    "commit": "f0d1c528d8d4d0d3d4e84a6b031b19e911e66ad3"
+  },
+  "_source": "https://github.com/azachar/angular-language-picker.git",
+  "_target": "^0.4.3",
+  "_originalSource": "azachar/angular-language-picker",
+  "_direct": true
+}

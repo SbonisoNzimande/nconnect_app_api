@@ -1,0 +1,52 @@
+<div id="register" class="animate form ">
+	<section class="login_content">
+		<form name="RegisterForm" ng-submit="SubmitRegisterForm (RegisterForm.$valid)">
+			<h1>Create Account</h1>
+			<div ng-show="registration_error" class="alert alert-danger alert-dismissible fade in" role="alert" style="text-shadow: none!important;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<strong>Error</strong> {{registration_error}}
+			</div>
+
+			<div ng-show="registration_success" class="alert alert-success alert-dismissible fade in" role="alert" style="text-shadow: none!important;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<strong>Successfully registered,</strong> redirecting to login.
+			</div>
+			<div>
+				<input type="text" class="form-control" name="Username" placeholder="Username" ng-model="Username" required ng-required='true' />
+				<p ng-show="RegisterForm.Username.$invalid && !RegisterForm.Username.$pristine" class="help-block">Your username is required.</p>
+			</div>
+			<div>
+				<input type="email" class="form-control" name="Email" placeholder="Email" ng-model="Email" required ng-required='true' />
+				<p ng-show="RegisterForm.Email.$invalid && !RegisterForm.Email.$pristine" class="help-block">Enter a valid email.</p>
+			</div>
+			<div>
+				<input type="password" class="form-control" name="Password" placeholder="Password" ng-model="Password" required ng-required='true' />
+				<p ng-show="RegisterForm.Password.$invalid && !RegisterForm.Password.$pristine" class="help-block">Enter a valid password.</p>
+			</div>
+			<div>
+				<input type="password" class="form-control" name="Password2" placeholder="Confirm Password" ng-model="Password2" required ng-required='true' />
+				<p ng-show="Password != Password2" class="help-block">Passwords must match.</p>
+			</div>
+			<div>
+				<button class="btn btn-default submit" type="submit" ng-disabled="RegisterForm.$invalid || Password != Password2" >Submit</button>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="separator">
+				<p class="change_link">Already a member ?
+					<a href="#signin" class="to_register"> Log in </a>
+				</p>
+
+				<div class="clearfix"></div>
+				<br />
+
+				<div>
+					<h1><i class="fa fa-paw"></i> Propay Person Management</h1>
+				</div>
+			</div>
+		</form>
+	</section>
+</div>
